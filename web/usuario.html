@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ouvidoria Condominial - Área do Morador</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Ouvidoria Digital Condominial · Morador</h1>
+      <p>Registre solicitações, sugestões e acompanhe retornos da administração.</p>
+      <nav class="nav">
+        <a href="usuario.html">Página Usuário</a>
+        <a href="admin.html">Página ADM</a>
+      </nav>
+    </header>
+
+    <main class="container grid grid-2">
+      <section class="card">
+        <h2>Novo registro</h2>
+        <form>
+          <label for="tipo">Tipo</label>
+          <select id="tipo" name="tipo">
+            <option>Reclamação</option>
+            <option>Sugestão</option>
+            <option>Melhoria</option>
+            <option>Comunicado</option>
+          </select>
+
+          <label for="categoria">Categoria</label>
+          <select id="categoria" name="categoria">
+            <option>Barulho</option>
+            <option>Manutenção</option>
+            <option>Segurança</option>
+            <option>Limpeza</option>
+            <option>Convivência</option>
+            <option>Reserva de área</option>
+          </select>
+
+          <label for="local">Local da ocorrência</label>
+          <input id="local" name="local" placeholder="Ex.: Torre B - 4º andar" />
+
+          <label for="descricao">Descrição</label>
+          <textarea id="descricao" name="descricao" placeholder="Descreva detalhes da solicitação"></textarea>
+
+          <label for="anexo">Anexo (opcional)</label>
+          <input id="anexo" name="anexo" type="file" />
+
+          <div style="margin-top: 12px; display: flex; gap: 8px;">
+            <button class="btn-primary" type="button">Enviar solicitação</button>
+            <button class="btn-secondary" type="reset">Limpar</button>
+          </div>
+        </form>
+        <p class="footer-note">Protótipo inicial em HTML/CSS para validação com equipe e moradores.</p>
+      </section>
+
+      <section class="card">
+        <h2>Meus chamados recentes</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Protocolo</th>
+                <th>Categoria</th>
+                <th>Local</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>OC-1041</td>
+                <td>Barulho</td>
+                <td>Torre A - 8º</td>
+                <td><span class="badge progress">Em análise</span></td>
+              </tr>
+              <tr>
+                <td>OC-1030</td>
+                <td>Manutenção</td>
+                <td>Elevador social</td>
+                <td><span class="badge done">Resolvido</span></td>
+              </tr>
+              <tr>
+                <td>OC-1024</td>
+                <td>Limpeza</td>
+                <td>Garagem - Bloco C</td>
+                <td><span class="badge open">Aberto</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 style="margin-top: 18px;">Cadastros rápidos</h2>
+        <form>
+          <label for="nomeMorador">Nome completo</label>
+          <input id="nomeMorador" placeholder="Digite seu nome" />
+
+          <label for="unidade">Unidade</label>
+          <input id="unidade" placeholder="Ex.: Torre B - Apto 305" />
+
+          <label for="contato">Contato</label>
+          <input id="contato" placeholder="Telefone ou e-mail" />
+
+          <div style="margin-top: 12px;">
+            <button class="btn-primary" type="button">Salvar cadastro</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

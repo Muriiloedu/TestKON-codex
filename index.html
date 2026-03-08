@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ouvidoria Condominial - Início</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f3f6fb;
+        color: #1f2937;
+      }
+      .wrap {
+        max-width: 860px;
+        margin: 48px auto;
+        padding: 0 16px;
+      }
+      .card {
+        background: #fff;
+        border: 1px solid #dbe3ef;
+        border-radius: 12px;
+        padding: 22px;
+        box-shadow: 0 3px 10px rgba(13, 39, 80, 0.06);
+      }
+      h1 {
+        margin: 0 0 8px;
+      }
+      p {
+        color: #4b5563;
+      }
+      .links {
+        display: grid;
+        gap: 12px;
+        margin-top: 18px;
+      }
+      a {
+        display: block;
+        text-decoration: none;
+        background: #1f6feb;
+        color: #fff;
+        border-radius: 8px;
+        padding: 12px 14px;
+        font-weight: 700;
+      }
+      a:hover {
+        background: #1554b8;
+      }
+      code {
+        background: #eef3ff;
+        padding: 2px 6px;
+        border-radius: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="card">
+        <h1>Ouvidoria Digital Condominial</h1>
+        <p>Se você não estava localizando os arquivos, comece por aqui 👇</p>
+
+        <div class="links">
+          <a href="web/usuario.html">Abrir Página do Usuário (Morador)</a>
+          <a href="web/admin.html">Abrir Página ADM (Síndico / Administradora)</a>
+        </div>
+
+        <p style="margin-top: 18px;">Rodando com servidor local: <code>python3 -m http.server 8000</code></p>
+        <p>Acesse: <code>http://localhost:8000</code></p>
+      </section>
+    </main>
+  </body>
+</html>

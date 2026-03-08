@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ouvidoria Condominial - Painel ADM</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Ouvidoria Digital Condominial · ADM / Síndico</h1>
+      <p>Painel para acompanhamento de solicitações, retorno aos moradores e visão operacional.</p>
+      <nav class="nav">
+        <a href="usuario.html">Página Usuário</a>
+        <a href="admin.html">Página ADM</a>
+      </nav>
+    </header>
+
+    <main class="container grid" style="gap: 16px;">
+      <section class="card">
+        <h2>Resumo rápido</h2>
+        <div class="metrics">
+          <article class="metric">
+            Chamados abertos
+            <strong>24</strong>
+          </article>
+          <article class="metric">
+            Em andamento
+            <strong>11</strong>
+          </article>
+          <article class="metric">
+            Resolvidos hoje
+            <strong>7</strong>
+          </article>
+          <article class="metric">
+            SLA médio
+            <strong>18h</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Fila de tratativas</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Protocolo</th>
+                <th>Morador</th>
+                <th>Categoria</th>
+                <th>Local</th>
+                <th>Prioridade</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>OC-1043</td>
+                <td>Ana Souza</td>
+                <td>Segurança</td>
+                <td>Portaria</td>
+                <td>Alta</td>
+                <td><span class="badge open">Aberto</span></td>
+              </tr>
+              <tr>
+                <td>OC-1041</td>
+                <td>João Lima</td>
+                <td>Barulho</td>
+                <td>Torre A - 8º</td>
+                <td>Média</td>
+                <td><span class="badge progress">Em análise</span></td>
+              </tr>
+              <tr>
+                <td>OC-1038</td>
+                <td>Marina Costa</td>
+                <td>Reserva de área</td>
+                <td>Salão de festas</td>
+                <td>Baixa</td>
+                <td><span class="badge done">Resolvido</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="card grid grid-2">
+        <article>
+          <h2>Retorno ao morador</h2>
+          <form>
+            <label for="protocolo">Protocolo</label>
+            <input id="protocolo" value="OC-1041" />
+
+            <label for="status">Novo status</label>
+            <select id="status">
+              <option>Em análise</option>
+              <option>Em andamento</option>
+              <option>Resolvido</option>
+              <option>Encerrado</option>
+            </select>
+
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" placeholder="Digite a devolutiva para o morador"></textarea>
+
+            <div style="margin-top: 12px;">
+              <button class="btn-primary" type="button">Atualizar chamado</button>
+            </div>
+          </form>
+        </article>
+
+        <article>
+          <h2>Cadastro de responsáveis</h2>
+          <form>
+            <label for="nomeResp">Nome</label>
+            <input id="nomeResp" placeholder="Responsável" />
+
+            <label for="setorResp">Setor</label>
+            <select id="setorResp">
+              <option>Manutenção</option>
+              <option>Portaria</option>
+              <option>Limpeza</option>
+              <option>Administração</option>
+            </select>
+
+            <label for="contatoResp">Contato</label>
+            <input id="contatoResp" placeholder="Telefone ou e-mail" />
+
+            <div style="margin-top: 12px;">
+              <button class="btn-primary" type="button">Cadastrar responsável</button>
+            </div>
+          </form>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
